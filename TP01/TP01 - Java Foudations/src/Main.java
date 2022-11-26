@@ -28,7 +28,7 @@ public class Main {
                     [4] - Sair""", "Escolha uma opção", JOptionPane.INFORMATION_MESSAGE));
 
             switch (option) {
-                case 1 ->  registerStudent(scanner, students, AV1, AV2);
+                case 1 ->  registerStudent(students, AV1, AV2);
                 case 2 -> consultStudent(students, AV1, AV2);
                 case 3 -> consultAllStudents(students, AV1, AV2);
                 case 4 -> { break; }
@@ -60,13 +60,6 @@ public class Main {
                 return;
             }
             consultStudent(students, av1, av2, i);
-//            System.out.printf("""
-//                Nome: %s
-//                AV1: %d
-//                AV2: %d
-//                Média Final: %d
-//                Situação: %s
-//                %n""", name, AV1, AV2, average, situation);
         }
 
     }
@@ -92,13 +85,14 @@ public class Main {
     }
 
     public static void printSituation(String name, int AV1, int AV2, String situation) {
-        JOptionPane.showMessageDialog(null, String.format("""
-                Nome: %s
-                AV1: %d
-                AV2: %d
-                Média Final: %d
-                Situação: %s
-                %n""", name, AV1, AV2, (AV1 + AV2) / 2, situation), "Relatório", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, getStringFormat(name, AV1, AV2, situation), "Relatório", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    private static String getStringFormat(String name, int AV1, int AV2, String situation) {
+        var sb = new StringBuilder();
+        sb.append("Nome: ").append(name).append("\n AV1: ").append(AV1).append("\n AV2: ")
+                .append(AV2).append("\n Situação: ").append(situation);
+        return sb.toString();
     }
 
     public static int checkValidIndexPosition(String[] arr) throws ArrayIndexOutOfBoundsException {
@@ -109,13 +103,15 @@ public class Main {
         }
         throw new ArrayIndexOutOfBoundsException("Array is full!");
     }
-    public static void registerStudent(Scanner sc, String[] students, int[] AV1, int[] AV2) {
+    public static void registerStudent(String[] students, int[] AV1, int[] AV2) {
         int index = 0;
         try {
             index = checkValidIndexPosition(students);
         } catch (ArrayIndexOutOfBoundsException e) {
             JOptionPane.showMessageDialog(null, "Máximo de estudantes registrados");
             return;
+        } finally {
+            System.out.println("Index: " + index + " Maximum number os students registered");
         }
         students[index] = JOptionPane.showInputDialog(null, "Digite o nome do aluno", REGISTER, JOptionPane.INFORMATION_MESSAGE);
         AV1[index] =  Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a nota da AV1", REGISTER, JOptionPane.INFORMATION_MESSAGE));

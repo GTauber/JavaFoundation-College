@@ -1,0 +1,31 @@
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff
+/TP01/TP01 - Java Foudations/.idea/**/workspace.xml
+/TP01/TP01 - Java Foudations/.idea/**/tasks.xml
+/TP01/TP01 - Java Foudations/.idea/**/usage.statistics.xml
+/TP01/TP01 - Java Foudations/.idea/**/dictionaries
+/TP01/TP01 - Java Foudations/.idea/**/shelf
+
+/TP01/TP01 - Java Foudations/.idea/**/
+
+# Generated files
+/TP01/TP01 - Java Foudations/.idea/**/contentModel.xml
+
+# Sensitive or high-churn files
+/TP01/TP01 - Java Foudations/.idea/**/dataSources/
+/TP01/TP01 - Java Foudations/.idea/**/dataSources.ids
+/TP01/TP01 - Java Foudations/.idea/**/dataSources.local.xml
+/TP01/TP01 - Java Foudations/.idea/**/sqlDataSources.xml
+/TP01/TP01 - Java Foudations/.idea/**/dynamic.xml
+/TP01/TP01 - Java Foudations/.idea/**/uiDesigner.xml
+/TP01/TP01 - Java Foudations/.idea/**/dbnavigator.xml
+
+
+
+# IntelliJ
+/TP01/TP01 - Java Foudations/out/
+
+# SonarLint plugin
+/TP01/TP01 - Java Foudations/.idea/sonarlint/
