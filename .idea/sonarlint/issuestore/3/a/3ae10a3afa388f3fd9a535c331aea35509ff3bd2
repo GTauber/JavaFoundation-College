@@ -1,0 +1,41 @@
+
+J
+java:S3740/"/Provide the parametrized type for this generic.(•Íû»ùÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°æƒû
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿüı´
+k	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Îë‘üÿÿÿÿ
+f	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¾Ã
+f	java:S117C"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–ÍÖÉ
+f	java:S117C"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–ÍÖÉ
+f	java:S117H"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç›Ë¢
+f	java:S117H"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç›Ë¢
+k	java:S117W"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É›‰Ìùÿÿÿÿ
+k	java:S117W"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É›‰Ìùÿÿÿÿ
+k	java:S117["QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ÀÃËúÿÿÿÿ
+k	java:S117["QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ÀÃËúÿÿÿÿ
+k	java:S117j"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼Òı†ûÿÿÿÿ
+k	java:S117j"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼Òı†ûÿÿÿÿ
+0
+java:S1220""Move this file to a named package.
+V
+java:S1854";Remove this useless assignment to local variable "scanner".(ù ƒ‘üÿÿÿÿ
+G
+java:S1481",Remove this unused "scanner" local variable.(ù ƒ‘üÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(Ó§Ñº
+S	java:S106#"9Replace this use of System.out or System.err by a logger.(àêÍÓùÿÿÿÿ
+S
+java:S1854+"8Remove this useless assignment to local variable "name".(»îÃôúÿÿÿÿ
+S
+java:S18541"=Remove this useless assignment to local variable "situation".(™„Çµ
+R
+java:S18543"=Remove this useless assignment to local variable "situation".(©€ F
+X
+java:S18545"=Remove this useless assignment to local variable "situation".(ášôÒûÿÿÿÿ
+D
+java:S1481+")Remove this unused "name" local variable.(»îÃôúÿÿÿÿ
+I
+java:S1481/".Remove this unused "situation" local variable.(•Íû»ùÿÿÿÿ
+1
+java:S3626p"Remove this redundant jump.(ûÁİ…
+N	java:S106r"9Replace this use of System.out or System.err by a logger.(à³Ò×
+S	java:S106v"9Replace this use of System.out or System.err by a logger.(¦Ö÷ûÿÿÿÿ
