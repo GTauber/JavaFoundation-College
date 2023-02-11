@@ -7,20 +7,20 @@
 /TP01/TP01 - Java Foudations/.idea/**/usage.statistics.xml
 /TP01/TP01 - Java Foudations/.idea/**/dictionaries
 /TP01/TP01 - Java Foudations/.idea/**/shelf
-AT/ATFundBarber/.idea/**/workspace.xml
-AT/ATFundBarber/.idea/**/tasks.xml
-AT/ATFundBarber/.idea/**/usage.statistics.xml
-AT/ATFundBarber/.idea/**/dictionaries
-AT/ATFundBarber/.idea/**/shelf
+/AT/ATFundBarber/.idea/**/workspace.xml
+/AT/ATFundBarber/.idea/**/tasks.xml
+/AT/ATFundBarber/.idea/**/usage.statistics.xml
+/AT/ATFundBarber/.idea/**/dictionaries
+/AT/ATFundBarber/.idea/**/shelf
 
-ProffesorProjet/**
+/ProffesorProjet/*
 
 /TP01/TP01 - Java Foudations/.idea/**/
-AT/ATFundBarber/.idea/**/
+/AT/ATFundBarber/.idea/**/
 
 # Generated files
 /TP01/TP01 - Java Foudations/.idea/**/contentModel.xml
-AT/ATFundBarber/.idea/**/contentModel.xml
+/AT/ATFundBarber/.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
 /TP01/TP01 - Java Foudations/.idea/**/dataSources/
@@ -30,20 +30,19 @@ AT/ATFundBarber/.idea/**/contentModel.xml
 /TP01/TP01 - Java Foudations/.idea/**/dynamic.xml
 /TP01/TP01 - Java Foudations/.idea/**/uiDesigner.xml
 /TP01/TP01 - Java Foudations/.idea/**/dbnavigator.xml
-AT/ATFundBarber/.idea/**/dataSources/
-AT/ATFundBarber/.idea/**/dataSources.ids
-AT/ATFundBarber/.idea/**/dataSources.local.xml
-AT/ATFundBarber/.idea/**/sqlDataSources.xml
-AT/ATFundBarber/.idea/**/dynamic.xml
-AT/ATFundBarber/.idea/**/uiDesigner.xml
-AT/ATFundBarber/.idea/**/dbnavigator.xml
+/AT/ATFundBarber/.idea/**/dataSources/
+/AT/ATFundBarber/.idea/**/dataSources.ids
+/AT/ATFundBarber/.idea/**/dataSources.local.xml
+/AT/ATFundBarber/.idea/**/sqlDataSources.xml
+/AT/ATFundBarber/.idea/**/dynamic.xml
+/AT/ATFundBarber/.idea/**/uiDesigner.xml
+/AT/ATFundBarber/.idea/**/dbnavigator.xml
 
 
 
 # IntelliJ
 /TP01/TP01 - Java Foudations/out/
-AT/ATFundBarber/out/
 
 # SonarLint plugin
 /TP01/TP01 - Java Foudations/.idea/sonarlint/
-AT/ATFundBarber/.idea/sonarlint/
+/AT/ATFundBarber/.idea/sonarlint/

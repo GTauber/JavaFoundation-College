@@ -1,6 +1,6 @@
 package com.tauber.atfundbarber.model.test;
 
-import com.tauber.atfundbarber.model.domain.Hair;
+import com.tauber.atfundbarber.model.entity.Hair;
 import com.tauber.atfundbarber.model.exception.NoHairException;
 import com.tauber.atfundbarber.model.exception.PriceZeroException;
 

@@ -1,6 +1,6 @@
 package com.tauber.atfundbarber.model.test;
 
-import com.tauber.atfundbarber.model.domain.Beard;
+import com.tauber.atfundbarber.model.entity.Beard;
 import com.tauber.atfundbarber.model.exception.BeardToLongException;
 import com.tauber.atfundbarber.model.exception.PriceZeroException;
 

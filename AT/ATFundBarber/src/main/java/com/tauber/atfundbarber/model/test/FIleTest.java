@@ -1,12 +1,12 @@
 package com.tauber.atfundbarber.model.test;
 
 import com.tauber.atfundbarber.enums.Gender;
-import com.tauber.atfundbarber.model.domain.Attendance;
-import com.tauber.atfundbarber.model.domain.Barber;
-import com.tauber.atfundbarber.model.domain.Beard;
-import com.tauber.atfundbarber.model.domain.Brow;
-import com.tauber.atfundbarber.model.domain.Cuts;
-import com.tauber.atfundbarber.model.domain.Hair;
+import com.tauber.atfundbarber.model.entity.Attendance;
+import com.tauber.atfundbarber.model.entity.Barber;
+import com.tauber.atfundbarber.model.entity.Beard;
+import com.tauber.atfundbarber.model.entity.Brow;
+import com.tauber.atfundbarber.model.entity.Cuts;
+import com.tauber.atfundbarber.model.entity.Hair;
 import com.tauber.atfundbarber.model.exception.AttandenceWithoutBarberException;
 import com.tauber.atfundbarber.model.exception.AttandenceWithoutCutsException;
 import com.tauber.atfundbarber.model.exception.BeardToLongException;
@@ -16,8 +16,6 @@ import com.tauber.atfundbarber.model.exception.PriceZeroException;
 import com.tauber.atfundbarber.model.exception.ToMuchWiresException;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;

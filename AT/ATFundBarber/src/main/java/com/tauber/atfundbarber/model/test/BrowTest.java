@@ -1,6 +1,6 @@
 package com.tauber.atfundbarber.model.test;
 
-import com.tauber.atfundbarber.model.domain.Brow;
+import com.tauber.atfundbarber.model.entity.Brow;
 import com.tauber.atfundbarber.model.exception.PriceZeroException;
 import com.tauber.atfundbarber.model.exception.ToMuchWiresException;
 
