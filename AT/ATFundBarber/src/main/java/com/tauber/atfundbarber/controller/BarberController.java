@@ -16,9 +16,9 @@ public class BarberController {
     private final BarberServiceImpl barberService;
 
     @PostMapping("/registerBarber")
-    public String registerBarber(Barber barber) {
+    public String registerBarber(Model model, Barber barber) {
         barberService.save(barber);
-        return "barbers/registerBarber";
+        return listBarbers(model);
     }
     @GetMapping("/listBarbers")
     public String listBarbers(Model model) {

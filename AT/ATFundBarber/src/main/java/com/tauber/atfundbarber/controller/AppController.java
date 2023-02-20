@@ -30,4 +30,9 @@ public class AppController {
       public String barbers() {
           return "barbers/listBarbers";
       }
+
+      @GetMapping("/registerBarber")
+      public String registerBarber() {
+          return "barbers/register";
+      }
 }
