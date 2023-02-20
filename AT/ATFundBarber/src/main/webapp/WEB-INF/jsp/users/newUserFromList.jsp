@@ -17,12 +17,12 @@
 <body>
 <div class="container">
     <h2 class="text-center">User Registration Form</h2>
-    <form action="${pageContext.request.contextPath}/registerUser"
+    <form action="${pageContext.request.contextPath}/logged/registerUser"
           method="post">
         <div class="form-group">
             <label for="userName">Username</label> <input type="text"
-                                                              class="form-control" id="userName" placeholder="Enter your username"
-                                                              name="userName" required>
+                                                          class="form-control" id="userName" placeholder="Enter your username"
+                                                          name="userName" required>
         </div>
         <div class="form-group">
             <label for="firstName">First Name:</label> <input type="text"

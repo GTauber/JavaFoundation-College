@@ -1,20 +1,21 @@
 package com.tauber.atfundbarber.controller;
 
+import com.tauber.atfundbarber.model.entity.DTO.UserDto;
 import com.tauber.atfundbarber.model.entity.User;
 import com.tauber.atfundbarber.service.UserService;
-import java.util.List;
+import com.tauber.atfundbarber.service.impl.UserServiceImpl;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @Slf4j
 @AllArgsConstructor
 public class UserController {
-    private final UserService userService;
+    private final UserServiceImpl userService;
 
     @GetMapping("/register")
     public String register() {
@@ -27,24 +28,34 @@ public class UserController {
         userService.saveNewUser(user);
         return "redirect:/";
     }
-
     @GetMapping("/users")
     public String users() {
         return "users/users";
     }
 
-    @GetMapping("/test")
-    public ModelAndView getAllUsers(ModelAndView modelAndView) {
-        List<User> users = userService.getAllUsers();
-        modelAndView.addObject("users", users);
-        modelAndView.setViewName("test");
-        return modelAndView;
+    @PostMapping("/login")
+    public String login(Model model, UserDto userDto) {
+        log.info("Logging in User {}", userDto);
+        var loggedUser = userService.validateUser(userDto);
+
+        if (loggedUser.isPresent()) {
+            return "home";
+        }
+        model.addAttribute("error", "Invalid username or password");
+        return "users/userLogin";
+    }
+    @GetMapping("/listUsers")
+    public String listUsers(Model model) {
+        model.addAttribute("users", userService.getAllUsers());
+        return "users/listUsers";
     }
 
-    @GetMapping("/teset")
-    public ModelAndView getAllUsers() {
-        List<User> users = userService.getAllUsers();
-        return new ModelAndView("test", "users", users);
+    @PostMapping("/logged/registerUser")
+    public String registerUserFromLoggedArea(Model model, User user) {
+        log.info("Registering User {}", user);
+        userService.saveNewUser(user);
+        model.addAttribute("success", "User registered successfully");
+        return listUsers(model);
     }
 
 }

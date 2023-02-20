@@ -10,4 +10,24 @@ public class AppController {
       public String index() {
           return "index";
       }
+
+      @GetMapping("/login")
+      public String login() {
+          return "users/userLogin";
+      }
+
+      @GetMapping("/home")
+      public String home() {
+          return "home";
+      }
+
+      @GetMapping("/logged/registerUser")
+      public String registerUserFromLoggedArea() {
+          return "users/newUserFromList";
+      }
+
+      @GetMapping("/barbers")
+      public String barbers() {
+          return "barbers/listBarbers";
+      }
 }

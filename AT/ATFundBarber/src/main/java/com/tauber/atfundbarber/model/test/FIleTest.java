@@ -1,6 +1,6 @@
 package com.tauber.atfundbarber.model.test;
 
-import com.tauber.atfundbarber.enums.Gender;
+import com.tauber.atfundbarber.model.enums.Gender;
 import com.tauber.atfundbarber.model.entity.Attendance;
 import com.tauber.atfundbarber.model.entity.Barber;
 import com.tauber.atfundbarber.model.entity.Beard;

@@ -1,4 +1,4 @@
-package com.tauber.atfundbarber.enums;
+package com.tauber.atfundbarber.model.enums;
 
 public enum Gender {
     FAMALE("Female"),
