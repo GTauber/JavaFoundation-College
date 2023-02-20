@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Main Page</title>
+    <title>BarberShop</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -18,9 +18,6 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="/register">Register</a>
                 </li>
                 <li class="nav-item">
@@ -32,13 +29,13 @@
 </header>
 <main>
     <div class="container my-5">
-        <h1 class="text-center">Welcome to the Index Main Page</h1>
-        <p class="text-center">This is the main page of our website.</p>
+        <h1 class="text-center">Welcome</h1>
+        <p class="text-center">Login to be redirected to the MembersArea</p>
     </div>
 </main>
 <footer>
     <div class="bg-light py-3">
-        <p class="text-center">&copy; 2023 Index Main Page</p>
+        <p class="text-center">&copy; 2023</p>
     </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

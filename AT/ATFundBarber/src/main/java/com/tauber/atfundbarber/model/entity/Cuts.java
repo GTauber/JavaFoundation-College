@@ -1,47 +1,47 @@
 package com.tauber.atfundbarber.model.entity;
 
 import com.tauber.atfundbarber.model.exception.PriceZeroException;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
 import java.util.UUID;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
 public abstract class Cuts {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id", nullable = false)
     private UUID id;
 
     private String name;
 
     private Double price;
 
-    private boolean isAvailable;
+    private boolean available;
 
-    private Cuts() {
-        this.id = UUID.randomUUID();
-    }
-
-    protected Cuts(String name, Double price, boolean isAvailable) throws PriceZeroException {
+    protected Cuts(String name, Double price, boolean available) throws PriceZeroException {
         this();
         if (price == 0) throw new PriceZeroException("Price cannot be zero");
         this.price = price;
         this.name = name;
-        this.isAvailable = isAvailable;
+        this.available = available;
     }
-
     public abstract double getFullValue();
-
-    public UUID getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public boolean isAvailable() {
-        return isAvailable;
-    }
 
     @Override
     public String toString() {

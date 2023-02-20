@@ -1,7 +1,7 @@
 package com.tauber.atfundbarber.model.enums;
 
 public enum Gender {
-    FAMALE("Female"),
+    FEMALE("Female"),
     MALE("Male");
 
 

@@ -3,7 +3,18 @@ package com.tauber.atfundbarber.model.entity;
 import com.tauber.atfundbarber.model.constants.Price;
 import com.tauber.atfundbarber.model.exception.BeardToLongException;
 import com.tauber.atfundbarber.model.exception.PriceZeroException;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Transient;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class Beard extends Cuts {
 
     private String style;
@@ -19,32 +30,13 @@ public class Beard extends Cuts {
         this.texture = texture;
     }
 
-    public String getStyle() {
-        return style;
-    }
-
-    public void setStyle(String style) {
-        this.style = style;
-    }
-
-    public double getLength() {
-        return length;
-    }
-
     public void setLength(double length) throws BeardToLongException {
         if (length > 10000) throw new BeardToLongException("Beard is too long");
         this.length = length;
     }
 
-    public String getTexture() {
-        return texture;
-    }
-
-    public void setTexture(String texture) {
-        this.texture = texture;
-    }
-
     @Override
+    @Transient
     public double getFullValue() {
         return texture.equalsIgnoreCase("curly") ? Price.PRICE_BEARD + 200L : Price.PRICE_BEARD;
     }

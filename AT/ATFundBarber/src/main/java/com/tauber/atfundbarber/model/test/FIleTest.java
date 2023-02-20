@@ -45,7 +45,7 @@ public class FIleTest {
                 switch (fields[0].toUpperCase()) {
                     case "AT":
                         try {
-                            var isMale = fields[3].equalsIgnoreCase("male") ? Gender.MALE : Gender.FAMALE;
+                            var isMale = fields[3].equalsIgnoreCase("male") ? Gender.MALE : Gender.FEMALE;
                             attendance = new Attendance(new Barber(fields[1], fields[2], isMale), cuts);
                         } catch (AttandenceWithoutCutsException | InvalidBarber | AttandenceWithoutBarberException e) {
                             System.out.println(e.getMessage());

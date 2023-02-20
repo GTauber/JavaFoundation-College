@@ -4,7 +4,18 @@ import static com.tauber.atfundbarber.model.constants.Price.PRICE_BROW;
 
 import com.tauber.atfundbarber.model.exception.PriceZeroException;
 import com.tauber.atfundbarber.model.exception.ToMuchWiresException;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Transient;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class Brow extends Cuts {
 
     private int wires;
@@ -13,32 +24,13 @@ public class Brow extends Cuts {
 
     private String color;
 
-    public int getWires() {
-        return wires;
-    }
-
     public void setWires(int wires) throws ToMuchWiresException {
         if (wires > 100) throw new ToMuchWiresException("Too much wires");
         this.wires = wires;
     }
 
-    public double getWidth() {
-        return width;
-    }
 
-    public void setWidth(double width) {
-        this.width = width;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    @Override
+    @Transient
     public double getFullValue() {
         if (!this.color.equalsIgnoreCase("black")) return PRICE_BROW + 200L;
         return PRICE_BROW;
