@@ -32,6 +32,7 @@ public class User {
     private UUID id;
     private String firstName;
     private String lastName;
+    @Column(unique = true)
     private String userName;
     private LocalDate dateOfBirth;
     private String password;

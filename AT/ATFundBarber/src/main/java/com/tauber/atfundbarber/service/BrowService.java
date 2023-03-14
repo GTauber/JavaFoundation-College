@@ -8,4 +8,5 @@ public interface BrowService {
     Brow save(Brow brow);
     List<Brow> getAllBrows();
 
+    void delete(Brow brow);
 }

@@ -22,7 +22,7 @@
                <div class="alert alert-danger" role="alert">
                     ${error}
                 </div>
-            </c:if>
+          </c:if>
 
             <form action="/login" method="POST" class="form-container">
                 <h1 class="text-center">Login</h1>
@@ -38,7 +38,7 @@
                     <button type="submit" class="btn btn-primary btn-block">Login</button>
                 </div>
                 <div class="text-center">
-                    <a href="#">Forgot password?</a>
+<%--                    <a href="#">Forgot password?</a>--%>
                 </div>
             </form>
         </div>

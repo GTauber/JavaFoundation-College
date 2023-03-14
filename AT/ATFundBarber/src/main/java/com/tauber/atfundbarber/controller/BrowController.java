@@ -25,4 +25,10 @@ public class BrowController {
         return brows(model);
     }
 
+    @PostMapping("/deleteBrow")
+    public String deleteBrow(Model model, Brow brow) {
+        browService.delete(brow);
+        return brows(model);
+    }
+
 }

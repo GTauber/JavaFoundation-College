@@ -1,0 +1,3 @@
+Normal Beard;100;TRUE;Natural;299.99;SuperSoft
+Fly Beard;200;TRUE;Half-Natural;333.33;Weird
+SuperMega Hiper Beard;300;FALSE;SuperHuman;999.99;Hard

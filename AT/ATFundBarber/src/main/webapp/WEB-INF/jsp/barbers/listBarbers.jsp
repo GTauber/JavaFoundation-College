@@ -19,34 +19,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/home">Barbershop</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="/listBarbers">Barbers</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Beards</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Brows</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Hairs</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Attendance</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="${pageContext.request.contextPath}/listUsers">List of Users</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<%@ include file="../common/menu.jsp" %>
 <div class="container">
     <h1>List of Barbers</h1>
     <button type="button" class="btn btn-success" onclick="location.href='/registerBarber'">New</button>
@@ -56,6 +29,8 @@
             <th>Name</th>
             <th>CPF</th>
             <th>Gender</th>
+            <th></th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -64,6 +39,15 @@
                 <td>${barber.name}</td>
                 <td>${barber.cpf}</td>
                 <td>${barber.gender}</td>
+                <td>
+                    <form action="/deleteBarber" method="post">
+                        <input type="hidden" name="id" value="${barber.id}" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary">Edit</button>
+                </td>
             </tr>
         </c:forEach>
         </tbody>

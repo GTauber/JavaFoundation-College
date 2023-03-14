@@ -27,6 +27,8 @@
             <th>Height</th>
             <th>Width</th>
             <th>Fade</th>
+            <th></th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -39,6 +41,15 @@
                 <td>${hair.height}</td>
                 <td>${hair.width}</td>
                 <td>${hair.fade}</td>
+                <td>
+                    <form action="/deleteHair" method="post">
+                        <input type="hidden" name="id" value="${hair.id}" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary">Edit</button>
+                </td>
             </tr>
         </c:forEach>
         </tbody>

@@ -29,6 +29,8 @@
                     <th>Wires</th>
                     <th>Width</th>
                     <th>Color</th>
+                    <th></th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -41,6 +43,15 @@
                         <td>${brows.wires}</td>
                         <td>${brows.width}</td>
                         <td>${brows.color}</td>
+                        <td>
+                            <form action="/deleteBrow" method="post">
+                                <input type="hidden" name="id" value="${brows.id}" />
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary">Edit</button>
+                        </td>
                     </tr>
                 </c:forEach>
                 </tbody>

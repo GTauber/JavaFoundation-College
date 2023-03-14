@@ -22,4 +22,9 @@ public class BeardServiceImpl implements BeardService {
     public List<Beard> getAllBeards() {
         return beardRepository.findAll();
     }
+
+    @Override
+    public void delete(Beard beard) {
+        beardRepository.delete(beard);
+    }
 }

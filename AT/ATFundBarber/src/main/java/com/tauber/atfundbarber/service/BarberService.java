@@ -8,4 +8,6 @@ public interface BarberService {
     Barber save(Barber barber);
 
     List<Barber> getAllBarbers();
+
+    void delete(Barber barber);
 }

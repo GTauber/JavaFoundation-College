@@ -9,4 +9,5 @@ public interface BeardService {
 
     List<Beard> getAllBeards();
 
+    void delete(Beard beard);
 }

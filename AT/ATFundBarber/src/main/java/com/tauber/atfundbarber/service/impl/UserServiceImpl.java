@@ -35,4 +35,9 @@ public class UserServiceImpl implements UserService {
         if (user.isPresent() && user.get().getPassword().equals(userDto.getPassword())) return user;
         return Optional.empty();
     }
+
+    @Override
+    public void deleteUser(User user) {
+         userRepository.delete(user);
+    }
 }

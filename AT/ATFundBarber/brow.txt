@@ -1,0 +1,3 @@
+SuperHairy Brow;100;TRUE;5000;30.50;red
+MegaHiperHairy Brow;200;TRUE;10000;60.50;red
+Supernatural Brow;999;TRUE;99999;999.99;colorful

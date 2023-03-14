@@ -32,5 +32,11 @@ public class HairController {
         return "hairs/listHairs";
     }
 
+    @PostMapping("/deleteHair")
+    public String deleteHair(Model model, Hair hair) {
+        hairService.delete(hair);
+        return listHairs(model);
+    }
+
 
 }

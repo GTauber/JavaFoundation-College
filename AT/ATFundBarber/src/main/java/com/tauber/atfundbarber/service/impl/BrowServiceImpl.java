@@ -22,4 +22,9 @@ public class BrowServiceImpl implements BrowService {
     public List<Brow> getAllBrows() {
         return browRepository.findAll();
     }
+
+    @Override
+    public void delete(Brow brow) {
+        browRepository.delete(brow);
+    }
 }

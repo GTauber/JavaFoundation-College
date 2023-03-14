@@ -18,19 +18,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">User List</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<%@ include file="../common/menu.jsp" %>
 <div class="container mt-5">
     <h1>User List</h1>
     <c:if test="${not empty success}">
@@ -61,7 +49,7 @@
                 <td><c:out value="${user.lastName}" /></td>
                 <td><c:out value="${user.dateOfBirth}" /></td>
                 <td>
-                    <form action="deleteUser" method="post">
+                    <form action="/deleteUser" method="post">
                         <input type="hidden" name="id" value="${user.id}" />
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>

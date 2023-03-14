@@ -10,9 +10,12 @@ import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 
 @Entity
@@ -21,6 +24,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Setter
 @Getter
+@SuperBuilder
 public abstract class Cuts {
 
     @Id

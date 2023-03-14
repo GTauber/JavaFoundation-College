@@ -26,4 +26,10 @@ public class BeardController {
         return beards(model);
     }
 
+    @PostMapping("/deleteBeard")
+    public String deleteBeard(Model model, Beard beard) {
+        beardService.delete(beard);
+        return beards(model);
+    }
+
 }

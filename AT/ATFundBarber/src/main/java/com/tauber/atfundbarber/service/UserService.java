@@ -12,4 +12,6 @@ public interface UserService {
     Optional<User> getUserByUserName(String userName);
     List<User> getAllUsers();
     Optional<User> validateUser(UserDto userDto);
+
+    void deleteUser(User user);
 }

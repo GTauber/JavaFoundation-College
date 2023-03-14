@@ -22,4 +22,9 @@ public class BarberServiceImpl implements BarberService {
     public List<Barber> getAllBarbers() {
         return barberRepository.findAll();
     }
+
+    @Override
+    public void delete(Barber barber) {
+        barberRepository.delete(barber);
+    }
 }

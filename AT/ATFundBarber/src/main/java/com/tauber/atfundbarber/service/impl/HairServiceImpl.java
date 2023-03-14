@@ -17,9 +17,12 @@ public class HairServiceImpl implements HairService {
     public Hair save(Hair hair) {
         return hairRepository.save(hair);
     }
-
     @Override
     public List<Hair> getAllHairs() {
         return hairRepository.findAll();
+    }
+    @Override
+    public void delete(Hair hair) {
+        hairRepository.delete(hair);
     }
 }

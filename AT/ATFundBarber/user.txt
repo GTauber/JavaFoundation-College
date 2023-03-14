@@ -1,0 +1,3 @@
+Super;Tauber;superTauber;2001/01/15;1
+Escherichia coli;Escherichia;coli;2001/01/15;1
+normal;normal;normal;2001/01/15;1

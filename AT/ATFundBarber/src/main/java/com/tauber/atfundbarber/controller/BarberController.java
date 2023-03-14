@@ -3,7 +3,6 @@ package com.tauber.atfundbarber.controller;
 import com.tauber.atfundbarber.model.entity.Barber;
 import com.tauber.atfundbarber.service.impl.BarberServiceImpl;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +23,12 @@ public class BarberController {
     public String listBarbers(Model model) {
         model.addAttribute("barbers", barberService.getAllBarbers());
         return "barbers/listBarbers";
+    }
+
+    @PostMapping("/deleteBarber")
+    public String deleteBarber(Model model, Barber barber) {
+        barberService.delete(barber);
+        return listBarbers(model);
     }
 
 }

@@ -8,4 +8,5 @@ public interface HairService {
     Hair save(Hair hair);
     List<Hair> getAllHairs();
 
+    void delete(Hair hair);
 }
