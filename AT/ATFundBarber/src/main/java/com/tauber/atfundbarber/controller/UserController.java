@@ -8,9 +8,9 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
@@ -37,12 +37,13 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public String login(Model model, UserDto userDto) {
+    public String login(Model model, UserDto userDto, HttpSession session) {
         log.info("Logging in User {}", userDto);
         var loggedUser = userService.validateUser(userDto);
 
         if (loggedUser.isPresent()) {
-            model.addAttribute("userSession", loggedUser.get().getUserName());
+            model.addAttribute("userSession", loggedUser.get());
+            session.setAttribute("userSession", loggedUser.get());
             return "home";
         }
         model.addAttribute("error", "Invalid username or password");
@@ -55,7 +56,7 @@ public class UserController {
     }
 
     @PostMapping("/logged/registerUser")
-    public String registerUserFromLoggedArea(Model model, User user) {
+    public String registerUserFromLoggedArea(@SessionAttribute("userSession") Model model, User user) {
         log.info("Registering User {}", user);
         userService.saveNewUser(user);
         model.addAttribute("success", "User registered successfully");

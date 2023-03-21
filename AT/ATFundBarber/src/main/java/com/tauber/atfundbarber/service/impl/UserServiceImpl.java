@@ -6,6 +6,7 @@ import com.tauber.atfundbarber.repository.UserRepository;
 import com.tauber.atfundbarber.service.UserService;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -39,5 +40,17 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteUser(User user) {
          userRepository.delete(user);
+    }
+
+    @Override
+    public Optional<User> getUserById(UUID uuid) {
+        var user = userRepository.findById(uuid);
+        if (user.isPresent()) return user;
+        return Optional.empty();
+    }
+
+    @Override
+    public User getUserList(int index) {
+        return userRepository.findAll().get(index);
     }
 }

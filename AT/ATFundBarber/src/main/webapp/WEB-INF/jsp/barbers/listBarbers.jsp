@@ -29,6 +29,7 @@
             <th>Name</th>
             <th>CPF</th>
             <th>Gender</th>
+            <th>Related User ID</th>
             <th></th>
             <th></th>
         </tr>
@@ -39,6 +40,7 @@
                 <td>${barber.name}</td>
                 <td>${barber.cpf}</td>
                 <td>${barber.gender}</td>
+                <td>${barber.user.id}</td>
                 <td>
                     <form action="/deleteBarber" method="post">
                         <input type="hidden" name="id" value="${barber.id}" />
@@ -46,7 +48,7 @@
                     </form>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-primary">Edit</button>
+                    <button type="button" class="btn btn-primary disabled">Edit</button>
                 </td>
             </tr>
         </c:forEach>

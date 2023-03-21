@@ -30,7 +30,7 @@
     </div>
     <div class="d-flex">
         <c:if test="${not empty userSession}">
-            <p class="m-0">Bem-vindo: ${userSession}!</p>
+            <p class="m-0">Bem-vindo: ${userSession.userName}!</p>
             <a class="nav-link p-0 pl-1" href="${pageContext.request.contextPath}/logout">Logout</a>
         </c:if>
     </div>

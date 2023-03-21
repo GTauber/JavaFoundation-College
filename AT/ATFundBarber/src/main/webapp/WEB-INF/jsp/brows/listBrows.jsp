@@ -50,7 +50,7 @@
                             </form>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-primary">Edit</button>
+                            <button type="button" class="btn btn-primary disabled">Edit</button>
                         </td>
                     </tr>
                 </c:forEach>
