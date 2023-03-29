@@ -9,4 +9,6 @@ public interface HairService {
     List<Hair> getAllHairs();
 
     void delete(Hair hair);
+
+    Hair getById(String cut);
 }

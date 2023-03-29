@@ -4,6 +4,7 @@ import com.tauber.atfundbarber.model.entity.Hair;
 import com.tauber.atfundbarber.repository.HairRepository;
 import com.tauber.atfundbarber.service.HairService;
 import java.util.List;
+import java.util.UUID;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -24,5 +25,10 @@ public class HairServiceImpl implements HairService {
     @Override
     public void delete(Hair hair) {
         hairRepository.delete(hair);
+    }
+
+    @Override
+    public Hair getById(String cut) {
+        return hairRepository.findById(UUID.fromString(cut)).orElse(null);
     }
 }

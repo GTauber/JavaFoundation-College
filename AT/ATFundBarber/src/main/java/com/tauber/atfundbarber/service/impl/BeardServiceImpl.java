@@ -4,6 +4,7 @@ import com.tauber.atfundbarber.model.entity.Beard;
 import com.tauber.atfundbarber.repository.BeardRepository;
 import com.tauber.atfundbarber.service.BeardService;
 import java.util.List;
+import java.util.UUID;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -26,5 +27,10 @@ public class BeardServiceImpl implements BeardService {
     @Override
     public void delete(Beard beard) {
         beardRepository.delete(beard);
+    }
+
+    @Override
+    public Beard getById(String cut) {
+        return beardRepository.findById(UUID.fromString(cut)).orElse(null);
     }
 }

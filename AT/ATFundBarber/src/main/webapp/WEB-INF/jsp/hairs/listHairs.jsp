@@ -32,18 +32,18 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach items="${hairs}" var="hair">
+        <c:forEach items="${hairs}" var="attendance">
             <tr>
-                <td>${hair.id}</td>
-                <td>${hair.name}</td>
-                <td>${hair.price}</td>
-                <td>${hair.available}</td>
-                <td>${hair.height}</td>
-                <td>${hair.width}</td>
-                <td>${hair.fade}</td>
+                <td>${attendance.id}</td>
+                <td>${attendance.name}</td>
+                <td>${attendance.price}</td>
+                <td>${attendance.available}</td>
+                <td>${attendance.height}</td>
+                <td>${attendance.width}</td>
+                <td>${attendance.fade}</td>
                 <td>
                     <form action="/deleteHair" method="post">
-                        <input type="hidden" name="id" value="${hair.id}" />
+                        <input type="hidden" name="id" value="${attendance.id}" />
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                 </td>

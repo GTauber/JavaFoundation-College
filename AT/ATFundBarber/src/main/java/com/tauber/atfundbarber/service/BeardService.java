@@ -10,4 +10,6 @@ public interface BeardService {
     List<Beard> getAllBeards();
 
     void delete(Beard beard);
+
+    Beard getById(String cut);
 }

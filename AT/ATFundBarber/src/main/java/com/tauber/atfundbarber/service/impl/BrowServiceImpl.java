@@ -4,6 +4,7 @@ import com.tauber.atfundbarber.model.entity.Brow;
 import com.tauber.atfundbarber.repository.BrowRepository;
 import com.tauber.atfundbarber.service.BrowService;
 import java.util.List;
+import java.util.UUID;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -26,5 +27,9 @@ public class BrowServiceImpl implements BrowService {
     @Override
     public void delete(Brow brow) {
         browRepository.delete(brow);
+    }
+    @Override
+    public Brow getById(String cut) {
+        return browRepository.findById(UUID.fromString(cut)).orElse(null);
     }
 }

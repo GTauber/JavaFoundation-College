@@ -1,30 +1,57 @@
 package com.tauber.atfundbarber.model.entity;
 
-import static com.tauber.atfundbarber.model.constants.Price.*;
+import static com.tauber.atfundbarber.model.constants.Price.PRICE_WEEKDAY;
+import static com.tauber.atfundbarber.model.constants.Price.PRICE_WEEKEND;
 
 import com.tauber.atfundbarber.model.exception.AttandenceWithoutBarberException;
 import com.tauber.atfundbarber.model.exception.AttandenceWithoutCutsException;
-import java.time.LocalDateTime;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
+
+@Entity
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
 public class Attendance {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id", nullable = false)
     private UUID id;
 
-    private LocalDateTime date;
+    private LocalDate date;
 
     private double totalValue;
 
+    @ManyToOne
+    @JoinColumn(name = "barber_id")
     private Barber barber;
 
+    @OneToMany(fetch = FetchType.EAGER)
+    @JoinColumn(name = "attendance_id")
     private List<Cuts> cuts = new ArrayList<>();
 
-    private Attendance() {
+    public Attendance() {
         this.id = UUID.randomUUID();
-        this.date = LocalDateTime.now();
+        this.date = LocalDate.now();
         if (date.getDayOfWeek().getValue() > 5) {
             this.totalValue = PRICE_WEEKEND + getTotalValue();
         } else {
@@ -49,7 +76,7 @@ public class Attendance {
         this.barber = barber;
     }
 
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 

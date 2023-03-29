@@ -9,4 +9,6 @@ public interface BrowService {
     List<Brow> getAllBrows();
 
     void delete(Brow brow);
+
+    Brow getById(String cut);
 }
