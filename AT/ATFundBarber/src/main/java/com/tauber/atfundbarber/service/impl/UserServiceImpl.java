@@ -1,18 +1,21 @@
 package com.tauber.atfundbarber.service.impl;
 
+import com.tauber.atfundbarber.clients.ViaCepClient;
 import com.tauber.atfundbarber.model.entity.DTO.UserDto;
 import com.tauber.atfundbarber.model.entity.User;
+import com.tauber.atfundbarber.model.entity.User.Address;
 import com.tauber.atfundbarber.repository.UserRepository;
 import com.tauber.atfundbarber.service.UserService;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {
+
+    private final ViaCepClient viaCepClient;
 
     private final UserRepository userRepository;
     @Override
@@ -43,14 +46,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Optional<User> getUserById(UUID uuid) {
-        var user = userRepository.findById(uuid);
-        if (user.isPresent()) return user;
-        return Optional.empty();
-    }
-
-    @Override
     public User getUserList(int index) {
         return userRepository.findAll().get(index);
     }
+
+    @Override
+    public Address getUserAddress(String cep) {
+        return viaCepClient.getAddress(cep);
+    }
+
 }

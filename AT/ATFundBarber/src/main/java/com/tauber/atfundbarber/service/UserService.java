@@ -2,9 +2,9 @@ package com.tauber.atfundbarber.service;
 
 import com.tauber.atfundbarber.model.entity.DTO.UserDto;
 import com.tauber.atfundbarber.model.entity.User;
+import com.tauber.atfundbarber.model.entity.User.Address;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 public interface UserService {
 
@@ -16,7 +16,8 @@ public interface UserService {
 
     void deleteUser(User user);
 
-    Optional<User> getUserById(UUID uuid);
-
     User getUserList(int index);
+
+    Address getUserAddress(String cep);
+
 }

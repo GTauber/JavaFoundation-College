@@ -3,6 +3,7 @@ package com.tauber.atfundbarber.controller;
 import com.tauber.atfundbarber.model.entity.DTO.UserDto;
 import com.tauber.atfundbarber.model.entity.User;
 import com.tauber.atfundbarber.service.impl.UserServiceImpl;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -26,8 +27,9 @@ public class UserController {
     }
 
     @PostMapping("/registerUser")
-    public String registerUser(User user) {
+    public String registerUser(User user, HttpServletRequest request) {
         log.info("Registering User {}", user);
+        user.setAddress(userService.getUserAddress(request.getParameter("cep")));
         userService.saveNewUser(user);
         return "redirect:/";
     }
@@ -56,8 +58,9 @@ public class UserController {
     }
 
     @PostMapping("/logged/registerUser")
-    public String registerUserFromLoggedArea(@SessionAttribute("userSession") Model model, User user) {
+    public String registerUserFromLoggedArea(@SessionAttribute("userSession") User user, Model model, HttpServletRequest request) {
         log.info("Registering User {}", user);
+        user.setAddress(userService.getUserAddress(request.getParameter("cep")));
         userService.saveNewUser(user);
         model.addAttribute("success", "User registered successfully");
         return listUsers(model);

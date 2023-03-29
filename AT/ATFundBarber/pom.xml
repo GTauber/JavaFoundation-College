@@ -49,6 +49,13 @@
       <version>2.0.0</version>
     </dependency>
 
+    <!--Open Feign Client-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
+      <version>4.0.1</version>
+    </dependency>
+
 
     <dependency>
       <groupId>jakarta.servlet</groupId>

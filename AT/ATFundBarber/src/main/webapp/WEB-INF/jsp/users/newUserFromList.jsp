@@ -43,6 +43,11 @@
                                                            class="form-control" id="password" placeholder="Enter password"
                                                            name="password" required>
         </div>
+        <div class="form-group">
+            <label for="cep">CEP</label> <input type="text"
+                                                class="form-control" id="cep" placeholder="Enter your CEP"
+                                                name="cep" required>
+        </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>

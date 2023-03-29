@@ -35,6 +35,11 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Date of Birth</th>
+            <th>Logradouro</th>
+            <th>Complemento</th>
+            <th>Bairro</th>
+            <th>Localidade</th>
+            <th>UF</th>
             <th></th>
             <th></th>
         </tr>
@@ -48,6 +53,11 @@
                 <td><c:out value="${user.firstName}" /></td>
                 <td><c:out value="${user.lastName}" /></td>
                 <td><c:out value="${user.dateOfBirth}" /></td>
+                <td><c:out value="${user.address.logradouro}" /></td>
+                <td><c:out value="${user.address.complemento}" /></td>
+                <td><c:out value="${user.address.localidade}" /></td>
+                <td><c:out value="${user.address.bairro}" /></td>
+                <td><c:out value="${user.address.uf}" /></td>
                 <td>
                     <form action="/deleteUser" method="post">
                         <input type="hidden" name="id" value="${user.id}" />
